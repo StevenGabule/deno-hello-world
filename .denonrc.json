@@ -1,0 +1,32 @@
+{
+  "files": [
+    "api/index.ts"
+  ],
+  "quiet": false,
+  "debug": true,
+  "fullscreen": true,
+  "extensions": [
+    ".js",
+    ".ts",
+    ".py",
+    ".json"
+  ],
+  "interval": 500,
+  "watch": [
+    "api/"
+  ],
+  "deno_args":[
+    "--allow-net:0.0.0.0:8000",
+    "--allow-read",
+    "--allow-env",
+    "--allow-write",
+    "--import-map=import-map.json"
+  ],
+  "execute": {
+    ".js": ["deno", "run"],
+    ".ts": ["deno", "run"],
+    ".py": ["python"]
+  },
+  "fmt": true,
+  "test": false
+}
